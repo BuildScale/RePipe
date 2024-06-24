@@ -1,0 +1,20 @@
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Naming/BlockForwarding:
+  EnforcedStyle: explicit
+
+# TODO: solve this
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+Metrics/MethodLength:
+  CountAsOne: [ 'array', 'hash', 'heredoc' ]
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
